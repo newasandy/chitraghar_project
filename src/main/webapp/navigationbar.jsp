@@ -29,10 +29,10 @@
                         Categories
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Painting</a></li>
-                        <li><a class="dropdown-item" href="#">Modern Art</a></li>
-                        <li><a class="dropdown-item" href="#">Abstract Art</a></li>
-                        <li><a class="dropdown-item" href="#">Expressionism Art</a></li>
+                        <li><a class="dropdown-item" href="/Category/more_painting_art.jsp">Painting</a></li>
+                        <li><a class="dropdown-item" href="/Category/more_modern_art.jsp">Modern Art</a></li>
+                        <li><a class="dropdown-item" href="/Category/more_abstract_art.jsp">Abstract Art</a></li>
+                        <li><a class="dropdown-item" href="/Category/more_expressionism_art.jsp">Expressionism Art</a></li>
                     </ul>
                 </li>
 
