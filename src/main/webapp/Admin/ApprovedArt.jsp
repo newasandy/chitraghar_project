@@ -16,6 +16,12 @@
     <title>Approved Art</title>
 </head>
 <body>
+<%
+  String adminEmail = (String) session.getAttribute("adminEmail");
+  if (adminEmail == null){
+    response.sendRedirect("/Admin/ALogin.jsp");
+  }
+%>
 <%@include file="adminNavigation.jsp"%>
 <%
   Connection connection = DatabaseConnection.getConnection();

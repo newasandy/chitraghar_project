@@ -22,10 +22,12 @@
 
 <%
     String notFind = (String) session.getAttribute("notFound");
-    System.out.println(notFind);
     if (notFind != null){
 %>
-<div><%=notFind%></div>
+<div class="alert alert-danger alert-dismissible fade show " role="alert">
+    <%=notFind%>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
 
 <%
     }
@@ -67,9 +69,37 @@
             String error = (String) request.getAttribute("pError");
             if (error != null) {
         %>
-        <p class="alert alert-danger">${pError}</p>
+        <p class="alert alert-danger " >${pError}</p>
         <% } %>
     </div>
+<%--Recommended art--%>
+<%
+
+    if (sEmail != null || sPassword != null) {
+
+
+%>
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between">
+                        <span>
+                            For You
+                        </span>
+
+
+        </div>
+        <div class="card-body">
+            <jsp:include page="Category/RecommendationSection.jsp"/>
+        </div>
+    </div>
+</div>
+<br/>
+
+<%
+    }
+%>
+
 
 <%--modern art--%>
 <div class="col-md-12">

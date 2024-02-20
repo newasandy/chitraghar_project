@@ -5,6 +5,9 @@ import com.example.chitraghar_project.entity.ArtEntity;
 import com.example.chitraghar_project.entity.UserEntity;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class AllServices {
     private Connection connection;
@@ -137,5 +140,21 @@ public class AllServices {
             artistId = resultSet.getInt("artist_id");
         }
         return artistId;
+    }
+
+    public static List<Integer> pickRandomId(List<Integer> sourceList, int count) {
+        List<Integer> pickedNumbers = new ArrayList<>();
+        Random random = new Random();
+
+        // Ensure count is not greater than the size of the source list
+        count = Math.min(count, sourceList.size());
+
+        for (int i = 0; i < count; i++) {
+            int randomIndex = random.nextInt(sourceList.size());
+            pickedNumbers.add(sourceList.get(randomIndex));
+            sourceList.remove(randomIndex); // Ensure the same number is not picked again
+        }
+
+        return pickedNumbers;
     }
 }

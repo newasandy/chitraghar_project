@@ -15,6 +15,7 @@
 <div class="container">
   <div class="rating-wrap">
     <div class="center">
+
       <fieldset class="rating">
         <input onclick="passArtRatingId()" type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
         <input onclick="passArtRatingId()" type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
@@ -60,8 +61,6 @@
         </div>
       </div>
     </div>
-
-
   </div>
 </div>
 <script src="js/rating.js"></script>

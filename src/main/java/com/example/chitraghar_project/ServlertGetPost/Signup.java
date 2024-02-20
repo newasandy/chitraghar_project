@@ -43,10 +43,10 @@ public class Signup extends HttpServlet {
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
-            HttpSession session = request.getSession(true);
-            session.setAttribute("password",password);
-            session.setAttribute("name",name);
-            session.setAttribute("email",email);
+//            HttpSession session = request.getSession(true);
+//            session.setAttribute("password",password);
+//            session.setAttribute("name",name);
+//            session.setAttribute("email",email);
             response.sendRedirect("index.jsp");
 
 

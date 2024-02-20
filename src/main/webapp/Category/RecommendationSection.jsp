@@ -73,7 +73,7 @@
            src="data:image/jpeg;base64,<%=new String(Base64.getEncoder().encode(AllServices.getArt(pickedNumbers.get(i))))%>" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title"><b><%= AllServices.getArtTitle(pickedNumbers.get(i)) %></b></h5>
-        <p class="card-text">Artist:<%=AllServices.getArtistById(artistId) %>
+        <p class="card-text">Artist: <%=AllServices.getArtistById(artistId) %>
           <br><span>Rating:  <%=AllServices.getRateValue(pickedNumbers.get(i))%> </span>
         </p>
         <a href="../ArtInfo.jsp?artId=<%=pickedNumbers.get(i)%>" class="btn btn-primary">More</a>
